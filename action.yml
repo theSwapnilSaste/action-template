@@ -1,0 +1,35 @@
+name: Name of Action
+
+description: Description and purpose of action in short
+
+author: theSwapnilSaste
+
+inputs:
+  GITHUB_TOKEN:
+    description: Secret GitHub API token required for API requests.
+    default: ${{ secrets.GITHUB_TOKEN }}
+    required: true
+  INPUT01:
+    desription: decribe input 1
+    default: 'default value for input 1'
+    required: false
+  INPUT02:
+    desription: decribe input 1
+    default: 'default value for input 2'
+    required: false
+
+outputs:
+  OUTPUT01:
+    desription: decribe output 1
+    default: 'default value for output 1  '
+  
+  desription: decribe outut 2
+    default: 'default value for output 2'
+
+branding:
+  icon: 'at-sign'
+  color: 'green'
+
+runs:
+  using: node12
+  main: lib/main.js
